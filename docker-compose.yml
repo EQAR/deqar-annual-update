@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  app:
+    build: ./app
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    environment:
+      - DEQAR_DB_HOST
+      - DEQAR_DB_NAME
+      - DEQAR_DB_USER
+      - DEQAR_DB_PASSWORD
+      - DEQAR_REF_YEAR
+
